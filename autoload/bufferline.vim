@@ -116,7 +116,7 @@ function! bufferline#init_echo()
     au!
 
     " events which output a message which should be immediately overwritten
-    autocmd BufWinEnter,WinEnter,InsertLeave,VimResized * call s:refresh(1)
+    autocmd BufWinEnter,WinEnter,InsertLeave,VimResized * call s:refresh(&updatetime)
   augroup END
 
   autocmd CursorHold * call s:echo()
